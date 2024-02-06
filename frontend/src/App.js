@@ -73,7 +73,7 @@ function App() {
         <header className="App-header">
           {loading && <h2>Loading...</h2>}
           {error && <h2>something went wrong...</h2>}
-          <h1>RTQ</h1>
+          <h1>Search with keyword "pro","htc","ultra"</h1>
           <input
             type="text"
             placeholder="Search"
