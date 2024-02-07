@@ -73,21 +73,14 @@ app.get("/api/products", (req, res) => {
   ];
 
   if (req.query.search) {
-    const filterProducts = products.filter((product) =>
-      product.name.toLowerCase().includes(req.query.search.toLowerCase())
+    const filterProducts = products.filter(
+      (product) =>
+        product.name.toLowerCase().includes(req.query.search.toLowerCase()) ||
+        product.price.toString().includes(req.query.search.toString())
     );
     res.send(filterProducts);
     return;
   }
-
-  //else if (req.query.search) {
-  //   const filterPrice = products.filter((product) =>
-  //     product.price.include(req.query.search)
-  //   );
-  //   console.log("Q", req.query.search);
-  //   res.send(filterPrice);
-  //   return;
-  // }
 
   setTimeout(() => {
     res.send(products);

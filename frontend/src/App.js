@@ -73,11 +73,13 @@ function App() {
         <header className="App-header">
           {loading && <h2>Loading...</h2>}
           {error && <h2>something went wrong...</h2>}
-          <h1>Search with keyword "pro","htc","ultra"</h1>
+          <h3>Search with keyword "pro","htc","ultra"</h3>
+          <h3>Search with price "100","300","200"</h3>
           <input
             type="text"
             placeholder="Search"
             value={search}
+            className="searchbox"
             onChange={(e) => setSearch(e.target.value)}
           />
           <h3>Number of Products : {products.length}</h3>
